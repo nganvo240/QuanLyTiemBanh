@@ -27,6 +27,7 @@ namespace QuanLyTiemBanh.GUI
         void AddAccountBinding()
         {
             // mấy cái textbox
+
         }
         void LoadEmployee()
         {

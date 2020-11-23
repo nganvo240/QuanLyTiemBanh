@@ -35,6 +35,31 @@ namespace QuanLyTiemBanh.DAO
             }
             return null;
         }
+        public DataTable GetListAccount()
+        {
+            return DataProvider.Instance.ExecuteQuery("select username, password, type, name as Tên_nhân_viên from employee, account where employee.id=account.nhanvien_id");
+        }
+        public bool InsertAccount(string userName, string pass, int type, int nhanvien_id)
+        {
+            string query = string.Format("INSERT Account ( username, password, type, nhanvien_id )VALUES  ( N'{0}', {1}, {2}, {3})", userName, pass, type, nhanvien_id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool UpdateAccount(string userName, string pass, int type, int nhanvien_id)
+        {
+            string query = string.Format("UPDATE dbo.Account SET username = N'{0}', password = {1}, type = {2}, nhanvien_id = {3} where username=N'{0}'", userName, pass, type, nhanvien_id);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteAccount(string userName)
+        {
+            string query = string.Format("Delete Account where UserName = N'{0}'", userName);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
     }
 }
 

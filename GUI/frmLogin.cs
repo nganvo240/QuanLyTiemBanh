@@ -39,7 +39,8 @@ namespace QuanLyTiemBanh
         }
         
         private void btnExit_Click(object sender, EventArgs e)
-        {
+        {            
+            this.Close();            
         }
 
         private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)

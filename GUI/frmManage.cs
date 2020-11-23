@@ -17,11 +17,6 @@ namespace QuanLyTiemBanh.GUI
     {
         private Account loginAccount;
 
-        //public Account LoginAccount
-        //{
-        //    get { return loginAccount; }
-        //    set { loginAccount = value; ChangeAccount(loginAccount.Type); }
-        //}
         private Account LoginAccount
         {
             get { return loginAccount; }
@@ -35,12 +30,13 @@ namespace QuanLyTiemBanh.GUI
         void ChangeAccount(int type)
         {
             //adminToolStripMenuItem.Enabled = type == 1;
-            lbUserName.Text = LoginAccount.UserName ;
+            lbUserName.Text = "Xin chào: "+LoginAccount.UserName ;            
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            panelHienThi.Controls.Clear();
+            lbNameButton.Text = "";
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -54,10 +50,31 @@ namespace QuanLyTiemBanh.GUI
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
+            panelHienThi.Controls.Clear();
             frmEmp f = new frmEmp();
-            this.Hide();
-            f.ShowDialog();
-            this.Show();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Nhân Viên";
+            f.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {            
+            panelHienThi.Controls.Clear();
+            frmAccount f = new frmAccount();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Tài khoản";
+            f.Show();
         }
     }
 }

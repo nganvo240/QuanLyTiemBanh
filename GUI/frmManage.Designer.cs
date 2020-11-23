@@ -35,25 +35,26 @@
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.panelFunction = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.groupBoxNhanVien = new System.Windows.Forms.GroupBox();
+            this.btnChiTietHoaDon = new System.Windows.Forms.Button();
+            this.groupBoxAdmin = new System.Windows.Forms.GroupBox();
+            this.btnHoaDon = new System.Windows.Forms.Button();
+            this.btnLoaiSanPham = new System.Windows.Forms.Button();
+            this.btnSanPham = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
-            this.btnXXX = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.lbNameButton = new System.Windows.Forms.Label();
             this.lbvien = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
+            this.panelHienThi = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelFunction.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxNhanVien.SuspendLayout();
+            this.groupBoxAdmin.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             // 
             this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUserName.AutoSize = true;
+            this.lbUserName.ForeColor = System.Drawing.Color.CadetBlue;
             this.lbUserName.Location = new System.Drawing.Point(477, 18);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(105, 20);
@@ -125,118 +127,117 @@
             // 
             // panelFunction
             // 
-            this.panelFunction.Controls.Add(this.button6);
-            this.panelFunction.Controls.Add(this.groupBox2);
-            this.panelFunction.Controls.Add(this.groupBox1);
+            this.panelFunction.Controls.Add(this.btnDangXuat);
+            this.panelFunction.Controls.Add(this.groupBoxNhanVien);
+            this.panelFunction.Controls.Add(this.groupBoxAdmin);
             this.panelFunction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFunction.Location = new System.Drawing.Point(0, 186);
             this.panelFunction.Name = "panelFunction";
             this.panelFunction.Size = new System.Drawing.Size(255, 463);
             this.panelFunction.TabIndex = 5;
             // 
-            // button6
+            // btnDangXuat
             // 
-            this.button6.AutoSize = true;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button6.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(0, 423);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(255, 40);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "&Đăng xuất";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.UseWaitCursor = true;
+            this.btnDangXuat.AutoSize = true;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDangXuat.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 423);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(255, 40);
+            this.btnDangXuat.TabIndex = 7;
+            this.btnDangXuat.Text = "&Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
-            // groupBox2
+            // groupBoxNhanVien
             // 
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 231);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 124);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Nhân viên";
+            this.groupBoxNhanVien.Controls.Add(this.btnChiTietHoaDon);
+            this.groupBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxNhanVien.Location = new System.Drawing.Point(0, 269);
+            this.groupBoxNhanVien.Name = "groupBoxNhanVien";
+            this.groupBoxNhanVien.Size = new System.Drawing.Size(255, 194);
+            this.groupBoxNhanVien.TabIndex = 1;
+            this.groupBoxNhanVien.TabStop = false;
+            this.groupBoxNhanVien.Text = "Nhân viên";
             // 
-            // button5
+            // btnChiTietHoaDon
             // 
-            this.button5.AutoSize = true;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 22);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(249, 40);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "&Chi tiết hóa đơn";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
+            this.btnChiTietHoaDon.AutoSize = true;
+            this.btnChiTietHoaDon.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnChiTietHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChiTietHoaDon.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnChiTietHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChiTietHoaDon.Location = new System.Drawing.Point(3, 22);
+            this.btnChiTietHoaDon.Name = "btnChiTietHoaDon";
+            this.btnChiTietHoaDon.Size = new System.Drawing.Size(249, 40);
+            this.btnChiTietHoaDon.TabIndex = 6;
+            this.btnChiTietHoaDon.Text = "&Chi tiết hóa đơn";
+            this.btnChiTietHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChiTietHoaDon.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // groupBoxAdmin
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnNhanVien);
-            this.groupBox1.Controls.Add(this.btnXXX);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(255, 231);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Admin";
+            this.groupBoxAdmin.Controls.Add(this.btnHoaDon);
+            this.groupBoxAdmin.Controls.Add(this.btnLoaiSanPham);
+            this.groupBoxAdmin.Controls.Add(this.btnSanPham);
+            this.groupBoxAdmin.Controls.Add(this.btnNhanVien);
+            this.groupBoxAdmin.Controls.Add(this.btnTaiKhoan);
+            this.groupBoxAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxAdmin.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxAdmin.Name = "groupBoxAdmin";
+            this.groupBoxAdmin.Size = new System.Drawing.Size(255, 269);
+            this.groupBoxAdmin.TabIndex = 0;
+            this.groupBoxAdmin.TabStop = false;
+            this.groupBoxAdmin.Text = "Admin";
             // 
-            // button4
+            // btnHoaDon
             // 
-            this.button4.AutoSize = true;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 182);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(249, 40);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "&Hóa đơn";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
+            this.btnHoaDon.AutoSize = true;
+            this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHoaDon.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoaDon.Location = new System.Drawing.Point(3, 182);
+            this.btnHoaDon.Name = "btnHoaDon";
+            this.btnHoaDon.Size = new System.Drawing.Size(249, 40);
+            this.btnHoaDon.TabIndex = 9;
+            this.btnHoaDon.Text = "&Hóa đơn";
+            this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnHoaDon.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnLoaiSanPham
             // 
-            this.button3.AutoSize = true;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 142);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(249, 40);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "&Loại Sản Phẩm";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.UseWaitCursor = true;
+            this.btnLoaiSanPham.AutoSize = true;
+            this.btnLoaiSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiSanPham.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnLoaiSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiSanPham.Location = new System.Drawing.Point(3, 142);
+            this.btnLoaiSanPham.Name = "btnLoaiSanPham";
+            this.btnLoaiSanPham.Size = new System.Drawing.Size(249, 40);
+            this.btnLoaiSanPham.TabIndex = 8;
+            this.btnLoaiSanPham.Text = "&Loại Sản Phẩm";
+            this.btnLoaiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLoaiSanPham.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSanPham
             // 
-            this.button2.AutoSize = true;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 102);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(249, 40);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "&Sản Phẩm";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
+            this.btnSanPham.AutoSize = true;
+            this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSanPham.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSanPham.Location = new System.Drawing.Point(3, 102);
+            this.btnSanPham.Name = "btnSanPham";
+            this.btnSanPham.Size = new System.Drawing.Size(249, 40);
+            this.btnSanPham.TabIndex = 7;
+            this.btnSanPham.Text = "&Sản Phẩm";
+            this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSanPham.UseVisualStyleBackColor = true;
             // 
             // btnNhanVien
             // 
             this.btnNhanVien.AutoSize = true;
+            this.btnNhanVien.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -247,23 +248,23 @@
             this.btnNhanVien.Text = "&Nhân viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNhanVien.UseVisualStyleBackColor = true;
-            this.btnNhanVien.UseWaitCursor = true;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
-            // btnXXX
+            // btnTaiKhoan
             // 
-            this.btnXXX.AutoSize = true;
-            this.btnXXX.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnXXX.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
-            this.btnXXX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXXX.Location = new System.Drawing.Point(3, 22);
-            this.btnXXX.Name = "btnXXX";
-            this.btnXXX.Size = new System.Drawing.Size(249, 40);
-            this.btnXXX.TabIndex = 5;
-            this.btnXXX.Text = "&Tài khoản";
-            this.btnXXX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnXXX.UseVisualStyleBackColor = true;
-            this.btnXXX.UseWaitCursor = true;
+            this.btnTaiKhoan.AutoSize = true;
+            this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTaiKhoan.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(3, 22);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(249, 40);
+            this.btnTaiKhoan.TabIndex = 5;
+            this.btnTaiKhoan.Text = "&Tài khoản";
+            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // panelTop
             // 
@@ -280,11 +281,12 @@
             // lbNameButton
             // 
             this.lbNameButton.AutoSize = true;
-            this.lbNameButton.Location = new System.Drawing.Point(24, 18);
+            this.lbNameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameButton.Location = new System.Drawing.Point(87, 14);
             this.lbNameButton.Name = "lbNameButton";
-            this.lbNameButton.Size = new System.Drawing.Size(86, 20);
+            this.lbNameButton.Size = new System.Drawing.Size(171, 25);
             this.lbNameButton.TabIndex = 5;
-            this.lbNameButton.Text = "Tên button";
+            this.lbNameButton.Text = "Tên from đang mở";
             // 
             // lbvien
             // 
@@ -297,20 +299,29 @@
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.Location = new System.Drawing.Point(631, 12);
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Location = new System.Drawing.Point(20, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(48, 33);
             this.btnExit.TabIndex = 4;
             this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panelHienThi
+            // 
+            this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHienThi.Location = new System.Drawing.Point(255, 58);
+            this.panelHienThi.Name = "panelHienThi";
+            this.panelHienThi.Size = new System.Drawing.Size(691, 591);
+            this.panelHienThi.TabIndex = 4;
             // 
             // frmManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(946, 649);
+            this.Controls.Add(this.panelHienThi);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -322,10 +333,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFunction.ResumeLayout(false);
             this.panelFunction.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxNhanVien.ResumeLayout(false);
+            this.groupBoxNhanVien.PerformLayout();
+            this.groupBoxAdmin.ResumeLayout(false);
+            this.groupBoxAdmin.PerformLayout();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             this.ResumeLayout(false);
@@ -339,20 +350,21 @@
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panelFunction;
-        private System.Windows.Forms.Button btnXXX;
+        private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnMin;
         private System.Windows.Forms.Label lbvien;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.GroupBox groupBoxNhanVien;
+        private System.Windows.Forms.Button btnChiTietHoaDon;
+        private System.Windows.Forms.GroupBox groupBoxAdmin;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnLoaiSanPham;
+        private System.Windows.Forms.Button btnSanPham;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Label lbNameButton;
+        private System.Windows.Forms.Panel panelHienThi;
     }
 }
