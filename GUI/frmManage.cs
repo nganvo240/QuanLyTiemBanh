@@ -29,7 +29,7 @@ namespace QuanLyTiemBanh.GUI
         }
         void ChangeAccount(int type)
         {
-            //adminToolStripMenuItem.Enabled = type == 1;
+            groupBoxAdmin.Visible = type == 1;//1 là admin, 0 là nhân viên
             lbUserName.Text = "Xin chào: "+LoginAccount.UserName ;            
         }
 
@@ -38,7 +38,7 @@ namespace QuanLyTiemBanh.GUI
             panelHienThi.Controls.Clear();
             lbNameButton.Text = "";
         }
-
+        
         private void btnMin_Click(object sender, EventArgs e)
         {
             if (panelLeft.Width == 40)
