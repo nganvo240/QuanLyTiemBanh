@@ -12,7 +12,7 @@ namespace QuanLyTiemBanh.DTO
         private int id;
         private string name;
         private string address;
-        private string phonenumber;
+        private string PhoneNumber;
         private string sex;
         private string position;
         private int salary;
@@ -21,7 +21,7 @@ namespace QuanLyTiemBanh.DTO
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Address { get => address; set => address = value; }
-        public string Phonenumber { get => phonenumber; set => phonenumber = value; }
+        public string Phone { get => PhoneNumber; set => PhoneNumber = value; }
         public string Sex { get => sex; set => sex = value; }
         public string Position { get => position; set => position = value; }
         public int Salary { get => salary; set => salary = value; }
@@ -32,7 +32,7 @@ namespace QuanLyTiemBanh.DTO
             this.Id = id;
             this.Name = name;
             this.Address = address;
-            this.Phonenumber = phonenumber;
+            this.Phone = PhoneNumber;
             this.Sex = sex;
             this.Position = position;
             this.Salary = salary;
@@ -43,7 +43,7 @@ namespace QuanLyTiemBanh.DTO
             this.Id = (int)row["id"];
             this.Name = row["name"].ToString();
             this.Address = row["address"].ToString();
-            this.Phonenumber = row["phonenumber"].ToString();
+            this.Phone = row["PhoneNumber"].ToString();
             this.Sex = row["sex"].ToString();
             this.Position = row["position"].ToString();
             this.Salary = (int)row["salary"];

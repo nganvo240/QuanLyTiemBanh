@@ -19,7 +19,7 @@ namespace QuanLyTiemBanh.DAO
         }
         public DataTable GetListEmployee()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT name, address, phonenumber, sex, position, salary, status FROM Employee");
+            return DataProvider.Instance.ExecuteQuery("SELECT id, name, address, PhoneNumber, sex, position, salary, status FROM Employee");
         }
         //xử lý cột là ID nhưng hiển thị là tên nhân viên
         public List<Employee> GetListEmpToCb()
@@ -37,6 +37,28 @@ namespace QuanLyTiemBanh.DAO
             }
 
             return list;
+        }
+        
+        public bool InsertEmployee(int ID, string Name, string Address, string Phone, string Sex, string Position, int Salary, int Status)
+        {
+            string query = string.Format("INSERT Employee (id, name, address, PhoneNumber, sex, position, salary, status )VALUES  ( {0}, N'{1}', N'{2}', {3}, N'{4}', N'{5}', {6}, {7})", ID, Name, Address, Phone, Sex, Position, Salary, Status);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool UpdateEmployee(int ID, string Name, string Address, string Phone, string Sex, string Position, int Salary, int Status)
+        {
+            string query = string.Format("UPDATE dbo.Employee SET id = {0}, name = N'{1}', address = N'{2}', PhoneNumber = {3}, sex = N'{4}', position = N'{5}', salary = {6}, status = {7} where id = {0}", ID, Name, Address, Phone, Sex, Position, Salary, Status);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+        public bool DeleteEmployee(int ID)
+        {
+            string query = string.Format("DELETE Employee WHERE ID ={0}", ID);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
         }
     }
 }
