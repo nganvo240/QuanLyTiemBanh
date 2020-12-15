@@ -66,7 +66,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(262, 8);
+            this.btnEdit.Location = new System.Drawing.Point(138, 127);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(87, 31);
@@ -77,7 +77,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(131, 8);
+            this.btnDelete.Location = new System.Drawing.Point(240, 127);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 31);
@@ -88,7 +88,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(8, 8);
+            this.btnAdd.Location = new System.Drawing.Point(23, 127);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 31);
@@ -269,7 +269,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 416);
+            this.ClientSize = new System.Drawing.Size(802, 373);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);

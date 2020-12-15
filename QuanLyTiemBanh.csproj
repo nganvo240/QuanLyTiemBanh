@@ -47,15 +47,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\CakeDAO.cs" />
+    <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\EmployeeDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Cake.cs" />
+    <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="GUI\frmAccount.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmAccount.Designer.cs">
       <DependentUpon>frmAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCake.Designer.cs">
+      <DependentUpon>frmCake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmEmp.cs">
       <SubType>Form</SubType>
@@ -79,6 +95,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmAccount.resx">
       <DependentUpon>frmAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCake.resx">
+      <DependentUpon>frmCake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmEmp.resx">
       <DependentUpon>frmEmp.cs</DependentUpon>

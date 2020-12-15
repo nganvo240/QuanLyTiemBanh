@@ -77,7 +77,7 @@
             this.panelLeft.Controls.Add(this.panelFunction);
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(170, 422);
             this.panelLeft.TabIndex = 2;
@@ -89,7 +89,7 @@
             this.panelLogo.Controls.Add(this.btnMin);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(2);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(170, 121);
             this.panelLogo.TabIndex = 4;
@@ -99,7 +99,7 @@
             this.pictureBox1.BackgroundImage = global::QuanLyTiemBanh.Properties.Resources.logo;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(45, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(114, 73);
             this.pictureBox1.TabIndex = 7;
@@ -110,7 +110,7 @@
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHelp.Location = new System.Drawing.Point(2, 35);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(2);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(32, 21);
             this.btnHelp.TabIndex = 6;
@@ -123,7 +123,7 @@
             this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMin.Location = new System.Drawing.Point(2, 2);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(2);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(32, 21);
             this.btnMin.TabIndex = 5;
@@ -138,7 +138,7 @@
             this.panelFunction.Controls.Add(this.groupBoxAdmin);
             this.panelFunction.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFunction.Location = new System.Drawing.Point(0, 121);
-            this.panelFunction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelFunction.Margin = new System.Windows.Forms.Padding(2);
             this.panelFunction.Name = "panelFunction";
             this.panelFunction.Size = new System.Drawing.Size(170, 301);
             this.panelFunction.TabIndex = 5;
@@ -150,7 +150,7 @@
             this.btnDangXuat.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnDangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.Location = new System.Drawing.Point(0, 271);
-            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangXuat.Name = "btnDangXuat";
             this.btnDangXuat.Size = new System.Drawing.Size(170, 30);
             this.btnDangXuat.TabIndex = 7;
@@ -163,9 +163,9 @@
             this.groupBoxNhanVien.Controls.Add(this.btnChiTietHoaDon);
             this.groupBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxNhanVien.Location = new System.Drawing.Point(0, 175);
-            this.groupBoxNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxNhanVien.Name = "groupBoxNhanVien";
-            this.groupBoxNhanVien.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxNhanVien.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxNhanVien.Size = new System.Drawing.Size(170, 126);
             this.groupBoxNhanVien.TabIndex = 1;
             this.groupBoxNhanVien.TabStop = false;
@@ -179,7 +179,7 @@
             this.btnChiTietHoaDon.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnChiTietHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChiTietHoaDon.Location = new System.Drawing.Point(2, 15);
-            this.btnChiTietHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChiTietHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnChiTietHoaDon.Name = "btnChiTietHoaDon";
             this.btnChiTietHoaDon.Size = new System.Drawing.Size(166, 30);
             this.btnChiTietHoaDon.TabIndex = 6;
@@ -196,9 +196,9 @@
             this.groupBoxAdmin.Controls.Add(this.btnTaiKhoan);
             this.groupBoxAdmin.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBoxAdmin.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxAdmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdmin.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxAdmin.Name = "groupBoxAdmin";
-            this.groupBoxAdmin.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxAdmin.Padding = new System.Windows.Forms.Padding(2);
             this.groupBoxAdmin.Size = new System.Drawing.Size(170, 175);
             this.groupBoxAdmin.TabIndex = 0;
             this.groupBoxAdmin.TabStop = false;
@@ -212,7 +212,7 @@
             this.btnHoaDon.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHoaDon.Location = new System.Drawing.Point(2, 135);
-            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHoaDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnHoaDon.Name = "btnHoaDon";
             this.btnHoaDon.Size = new System.Drawing.Size(166, 30);
             this.btnHoaDon.TabIndex = 9;
@@ -227,13 +227,14 @@
             this.btnLoaiSanPham.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnLoaiSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoaiSanPham.Location = new System.Drawing.Point(2, 105);
-            this.btnLoaiSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLoaiSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.btnLoaiSanPham.Name = "btnLoaiSanPham";
             this.btnLoaiSanPham.Size = new System.Drawing.Size(166, 30);
             this.btnLoaiSanPham.TabIndex = 8;
             this.btnLoaiSanPham.Text = "&Loại Sản Phẩm";
             this.btnLoaiSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLoaiSanPham.UseVisualStyleBackColor = true;
+            this.btnLoaiSanPham.Click += new System.EventHandler(this.btnLoaiSanPham_Click);
             // 
             // btnSanPham
             // 
@@ -242,13 +243,14 @@
             this.btnSanPham.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSanPham.Location = new System.Drawing.Point(2, 75);
-            this.btnSanPham.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.btnSanPham.Name = "btnSanPham";
             this.btnSanPham.Size = new System.Drawing.Size(166, 30);
             this.btnSanPham.TabIndex = 7;
             this.btnSanPham.Text = "&Sản Phẩm";
             this.btnSanPham.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSanPham.UseVisualStyleBackColor = true;
+            this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
             // btnNhanVien
             // 
@@ -258,7 +260,7 @@
             this.btnNhanVien.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhanVien.Location = new System.Drawing.Point(2, 45);
-            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(166, 30);
             this.btnNhanVien.TabIndex = 6;
@@ -275,7 +277,7 @@
             this.btnTaiKhoan.Image = global::QuanLyTiemBanh.Properties.Resources.bananas_icon;
             this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTaiKhoan.Location = new System.Drawing.Point(2, 15);
-            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(166, 30);
             this.btnTaiKhoan.TabIndex = 5;
@@ -292,7 +294,7 @@
             this.panelTop.Controls.Add(this.lbUserName);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(170, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(714, 38);
             this.panelTop.TabIndex = 3;
@@ -322,7 +324,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Location = new System.Drawing.Point(13, 8);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(32, 21);
             this.btnExit.TabIndex = 4;
@@ -334,7 +336,7 @@
             // 
             this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelHienThi.Location = new System.Drawing.Point(170, 38);
-            this.panelHienThi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHienThi.Margin = new System.Windows.Forms.Padding(2);
             this.panelHienThi.Name = "panelHienThi";
             this.panelHienThi.Size = new System.Drawing.Size(714, 384);
             this.panelHienThi.TabIndex = 4;
@@ -348,7 +350,7 @@
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmManage";

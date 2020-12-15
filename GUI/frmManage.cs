@@ -76,5 +76,29 @@ namespace QuanLyTiemBanh.GUI
             lbNameButton.Text = "Tài khoản";
             f.Show();
         }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            panelHienThi.Controls.Clear();
+            frmCake f = new frmCake();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Sản Phẩm";
+            f.Show();
+        }
+
+        private void btnLoaiSanPham_Click(object sender, EventArgs e)
+        {
+            panelHienThi.Controls.Clear();
+            frmCategory f = new frmCategory();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Phân loại";
+            f.Show();
+        }
     }
 }
