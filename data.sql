@@ -1,92 +1,27 @@
-﻿USE [QuanLyTiemBanh]
+﻿
+
+USE [QuanLyTiemBanh]
 GO
-/****** Object:  Table [dbo].[ACCOUNT]    Script Date: 08-Dec-20 2:34:21 PM ******/
-SET ANSI_NULLS ON
+
+CREATE TABLE [dbo].[CATEGORY](
+	[id] [int] primary key NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+)
 GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[ACCOUNT](
-	[username] [nchar](50) NOT NULL,
-	[password] [nchar](20) NOT NULL,
-	[type] [int] NOT NULL,
-	[nhanvien_id] [int] NULL,
- CONSTRAINT [PK_ACCOUNT] PRIMARY KEY CLUSTERED 
-(
-	[username] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[BILL]    Script Date: 08-Dec-20 2:34:22 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[BILL](
-	[id] [int] NOT NULL,
-	[day_out] [datetime] NOT NULL,
-	[emp_id] [int] NULL,
- CONSTRAINT [PK_BILL] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[BILL_INFORCAKE]    Script Date: 08-Dec-20 2:34:22 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[BILL_INFORCAKE](
-	[bill_id] [int] NOT NULL,
-	[cake_id] [int] NOT NULL,
-	[amount] [int] NULL,
-	[price] [int] NULL,
-	[id] [int] NOT NULL,
- CONSTRAINT [PK_BILL_INFORCAKE] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[CAKE]    Script Date: 08-Dec-20 2:34:22 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 CREATE TABLE [dbo].[CAKE](
-	[id] [int] NOT NULL,
+	[id] [int] primary key NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[price] [int] NOT NULL,
 	[category_id] [int] NOT NULL,
 	[amount] [int] NOT NULL,
 	[place] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_CAKE] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
+	foreign key(category_id) references CATEGORY (id),
+)
 GO
-/****** Object:  Table [dbo].[CATEGORY]    Script Date: 08-Dec-20 2:34:22 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[CATEGORY](
-	[id] [int] NOT NULL,
-	[name] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_CATEGORY] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[EMPLOYEE]    Script Date: 08-Dec-20 2:34:22 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
+
 CREATE TABLE [dbo].[EMPLOYEE](
-	[id] [int] NOT NULL,
+	[id] [int] primary key NOT NULL,
 	[name] [nvarchar](50) NOT NULL,
 	[address] [nvarchar](50) NULL,
 	[PhoneNumber] [char](10) NOT NULL,
@@ -94,33 +29,36 @@ CREATE TABLE [dbo].[EMPLOYEE](
 	[position] [nvarchar](50) NOT NULL,
 	[salary] [int] NOT NULL,
 	[status] [int] NOT NULL,
- CONSTRAINT [PK_NhanVien] PRIMARY KEY CLUSTERED 
-(
-	[id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
+)
 GO
 
-ALTER TABLE [dbo].[ACCOUNT]  WITH CHECK ADD  CONSTRAINT [FK_ACCOUNT_EMPLOYEE] FOREIGN KEY([nhanvien_id])
-REFERENCES [dbo].[EMPLOYEE] ([id])
-GO
-ALTER TABLE [dbo].[ACCOUNT] CHECK CONSTRAINT [FK_ACCOUNT_EMPLOYEE]
-GO
-ALTER TABLE [dbo].[BILL]  WITH CHECK ADD  CONSTRAINT [FK_BILL_EMPLOYEE] FOREIGN KEY([emp_id])
-REFERENCES [dbo].[EMPLOYEE] ([id])
-GO
-ALTER TABLE [dbo].[BILL] CHECK CONSTRAINT [FK_BILL_EMPLOYEE]
-GO
-ALTER TABLE [dbo].[CAKE]  WITH CHECK ADD  CONSTRAINT [FK_CAKE_CATEGORY] FOREIGN KEY([category_id])
-REFERENCES [dbo].[CATEGORY] ([id])
-GO
-ALTER TABLE [dbo].[CAKE] CHECK CONSTRAINT [FK_CAKE_CATEGORY]
+
+CREATE TABLE [dbo].[ACCOUNT](
+	[username] [nchar](50) primary key NOT NULL,
+	[password] [nchar](20) NOT NULL,
+	[type] [int] NOT NULL,
+	[nhanvien_id] [int] NULL,
+	foreign key(nhanvien_id) references EMPLOYEE(id)
+ )
 GO
 
-ALTER TABLE BILL_INFORCAKE WITH CHECK ADD  CONSTRAINT [FK_BILL_INFORCAKE1] FOREIGN KEY (bill_id) REFERENCES BILL
+CREATE TABLE [dbo].[BILL](
+	[id] [int] primary key identity(1,1) NOT NULL,
+	[day_out] [datetime] NOT NULL,
+	[emp_id] [int] NULL,
+	foreign key(emp_id) references EMPLOYEE(id)
+)
 GO
 
-ALTER TABLE BILL_INFORCAKE WITH CHECK ADD  CONSTRAINT [FK_BILL_INFORCAKE2] FOREIGN KEY (cake_id) REFERENCES CAKE
+CREATE TABLE [dbo].[BILL_INFORCAKE](
+	[id] [int] primary key identity(1,1) NOT NULL,
+	[bill_id] [int] NOT NULL,
+	[cake_id] [int] NOT NULL,
+	[amount] [int] NULL,
+	[price] [int] NULL,
+	foreign key(bill_id) references BILL(id),
+	foreign key(cake_id) references CAKE(id),
+)
 GO
 
 INSERT [dbo].[EMPLOYEE] ([id], [name], [address], [PhoneNumber], [sex], [position], [salary], [status]) VALUES (1, N'Võ Thị Thanh Ngân', N'Đồng Tháp', N'12', N'Nữ', N'nhân viên', 7000000, 1)
@@ -157,18 +95,26 @@ insert CAKE values (9,N'Tart',12000,4,20,N'Kệ 4')
 insert CAKE values (10,N'Bánh mì thường',5000,1,100,N'Kệ 1')
 go
 
-insert BILL values (1,2020-11-10,3)
-insert BILL values (2,2020-10-9,4)
-insert BILL values (3,2020-11-10,3)
-insert BILL values (4,2020-11-10,3)
-insert BILL values (5,2020-9-15,5)
+SET IDENTITY_INSERT [dbo].[BILL] ON
+GO
+insert [dbo].[BILL] ([id],[day_out],[emp_id]) values (1,2020-11-10,3)
+insert [dbo].[BILL] ([id],[day_out],[emp_id]) values (2,2020-10-9,4)
+insert [dbo].[BILL] ([id],[day_out],[emp_id]) values (3,2020-11-10,3)
+insert [dbo].[BILL] ([id],[day_out],[emp_id]) values (4,2020-11-10,3)
+insert [dbo].[BILL] ([id],[day_out],[emp_id]) values (5,2020-9-15,5)
+GO
+SET IDENTITY_INSERT [dbo].[BILL] OFF
 go
 
-insert BILL_INFORCAKE values (1,2,5,9000,1)
-insert BILL_INFORCAKE values (2,1,5,5000,2)
-insert BILL_INFORCAKE values (2,6,1,5000,3)
-insert BILL_INFORCAKE values (3,3,1,9000,4)
-insert BILL_INFORCAKE values (4,7,1,5000,5)
-insert BILL_INFORCAKE values (5,9,1,12000,6)
-insert BILL_INFORCAKE values (5,10,2,5000,7)
+SET IDENTITY_INSERT [dbo].[BILL_INFORCAKE] ON
+GO
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (1,1,2,5,9000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (2,2,1,5,5000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (3,2,6,1,5000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (4,3,3,1,9000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (5,4,7,1,5000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (6,5,9,1,12000)
+insert [dbo].[BILL_INFORCAKE] ([id],[bill_id],[cake_id],[amount],[price]) values (7,5,10,2,5000)
 go
+SET IDENTITY_INSERT [dbo].[BILL_INFORCAKE] OFF
+GO
