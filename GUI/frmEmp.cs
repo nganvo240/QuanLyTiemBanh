@@ -109,12 +109,12 @@ namespace QuanLyTiemBanh.GUI
                 MessageBox.Show("Lỗi! Không sửa được tài khoản");
             }
         }
-        private event EventHandler deleteEmp;
+        /*private event EventHandler deleteEmp;
         public event EventHandler DeleteEmp
         {
             add { deleteEmp += value; }
             remove { deleteEmp -= value; }
-        }
+        }*/
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -123,8 +123,8 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Xóa tài khoản thành công");    
                 LoadEmployee();
-                if (deleteEmp != null)
-                    deleteEmp(this, new EventArgs());
+                /*if (deleteEmp != null)
+                    deleteEmp(this, new EventArgs());*/
             }
             else
             {

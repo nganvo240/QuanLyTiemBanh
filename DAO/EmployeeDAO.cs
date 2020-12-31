@@ -55,8 +55,8 @@ namespace QuanLyTiemBanh.DAO
         }
         public bool DeleteEmployee(int ID)
         {
-            string query = string.Format("DELETE Employee WHERE ID ={0}", ID);
-            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            string query = string.Format("SP_delEmployee @id");
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { ID });
 
             return result > 0;
         }

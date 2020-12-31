@@ -68,7 +68,7 @@ namespace QuanLyTiemBanh.GUI
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {            
             panelHienThi.Controls.Clear();
-            frmAccount f = new frmAccount();
+            frmAccount f = new frmAccount(loginAccount);
             f.TopLevel = false;
             f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             f.Dock = DockStyle.Left;

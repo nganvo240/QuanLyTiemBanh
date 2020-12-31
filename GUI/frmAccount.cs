@@ -15,15 +15,24 @@ namespace QuanLyTiemBanh.GUI
     public partial class frmAccount : Form
     {
         BindingSource accList = new BindingSource();
-        public frmAccount()
+        private Account loginAccount;
+
+        private Account LoginAccount
+        {
+            get { return loginAccount; }
+            set { loginAccount = value;  }
+        }
+        internal frmAccount(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             //load data
             dtgvAcc.DataSource = accList;
             LoadAcc();
             LoadListEmp(cbEmp);
             AddAccountBinding();
         }
+
 
         #region xử lý datagridview và nội dung ở textbox
         void AddAccountBinding()
@@ -32,7 +41,7 @@ namespace QuanLyTiemBanh.GUI
             txtNameAcc.DataBindings.Add(new Binding("Text", dtgvAcc.DataSource, "username", true, DataSourceUpdateMode.Never));
             txtPass.DataBindings.Add(new Binding("Text", dtgvAcc.DataSource, "password", true, DataSourceUpdateMode.Never));
             numericUpDown1.DataBindings.Add(new Binding("Value", dtgvAcc.DataSource, "type", true, DataSourceUpdateMode.Never));
-            //cbEmp.DataBindings.Add(new Binding("Text", dtgvAcc.DataSource, "nhanvien_id", true, DataSourceUpdateMode.Never));
+            cbEmp.DataBindings.Add(new Binding("Text", dtgvAcc.DataSource, "Tên_nhân_viên", true, DataSourceUpdateMode.Never));
 
         }
         void LoadAcc()
@@ -48,12 +57,12 @@ namespace QuanLyTiemBanh.GUI
         {                   
         }
         #endregion
-        private event EventHandler insertAcc;
+        /*private event EventHandler insertAcc;
         public event EventHandler InsertAcc
         {
             add { insertAcc += value; }
             remove { insertAcc -= value; }
-        }
+        }*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string userName = txtNameAcc.Text;
@@ -65,8 +74,8 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Thêm tài khoản thành công");
                 LoadAcc();
-                if (insertAcc != null)
-                    insertAcc(this, new EventArgs());
+                /*if (insertAcc != null)
+                    insertAcc(this, new EventArgs());*/
             }
             else
             {
@@ -98,22 +107,22 @@ namespace QuanLyTiemBanh.GUI
                 MessageBox.Show("Lỗi! Không sửa được tài khoản");
             }
         }
-        private event EventHandler deleteAcc;
+        /*private event EventHandler deleteAcc;
         public event EventHandler DeleteAcc
         {
             add { deleteAcc += value; }
             remove { deleteAcc -= value; }
-        }
+        }*/
         private void btnDelete_Click(object sender, EventArgs e)
         {
             string userName = txtNameAcc.Text;
 
-            if (AccountDAO.Instance.DeleteAccount(userName))
+            if (AccountDAO.Instance.DeleteAccount(userName, LoginAccount.UserName))
             {
                 MessageBox.Show("Xóa tài khoản thành công");
                 LoadAcc();
-                if (deleteAcc != null)
-                    deleteAcc(this, new EventArgs());
+                /*if (deleteAcc != null)
+                    deleteAcc(this, new EventArgs());*/
             }
             else
             {
@@ -125,6 +134,12 @@ namespace QuanLyTiemBanh.GUI
         {
             MessageBox.Show("Type: chỉ tồn tại giá trị 0 và 1 \n"+
                 "Tên nhân viên: chỉ chấp nhận tên nhân viên trong cửa hàng", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            txtNameAcc.Text = "";
+            txtPass.Text = "";
         }
     }
 }
