@@ -186,6 +186,7 @@
             this.btnChiTietHoaDon.Text = "&Chi tiết hóa đơn";
             this.btnChiTietHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnChiTietHoaDon.UseVisualStyleBackColor = true;
+            this.btnChiTietHoaDon.Click += new System.EventHandler(this.btnChiTietHoaDon_Click);
             // 
             // groupBoxAdmin
             // 
@@ -219,6 +220,7 @@
             this.btnHoaDon.Text = "&Hóa đơn";
             this.btnHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHoaDon.UseVisualStyleBackColor = true;
+            this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
             // btnLoaiSanPham
             // 

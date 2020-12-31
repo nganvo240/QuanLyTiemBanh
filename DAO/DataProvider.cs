@@ -10,8 +10,7 @@ namespace QuanLyTiemBanh.DAO
 {
     class DataProvider
     {
-        private static DataProvider instance; 
-
+        private static DataProvider instance;
         public static DataProvider Instance
         {
             get
@@ -24,7 +23,7 @@ namespace QuanLyTiemBanh.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=DESKTOP-3QQ1OPI;Initial Catalog=QuanLyTiemBanh;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-CIMRIEK;Initial Catalog=QuanLyTiemBanh;Integrated Security=True";
 
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {

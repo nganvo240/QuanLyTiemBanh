@@ -100,5 +100,29 @@ namespace QuanLyTiemBanh.GUI
             lbNameButton.Text = "Phân loại";
             f.Show();
         }
+
+        private void btnChiTietHoaDon_Click(object sender, EventArgs e)
+        {
+            panelHienThi.Controls.Clear();
+            frmBillInfor f = new frmBillInfor();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Bill_Information";
+            f.Show();
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            panelHienThi.Controls.Clear();
+            frmBill f = new frmBill();
+            f.TopLevel = false;
+            f.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            f.Dock = DockStyle.Left;
+            panelHienThi.Controls.Add(f);
+            lbNameButton.Text = "Bill";
+            f.Show();
+        }
     }
 }
