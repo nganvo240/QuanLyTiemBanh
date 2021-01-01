@@ -57,19 +57,20 @@ namespace QuanLyTiemBanh.GUI
             // 
             // txtDayOut
             // 
-            this.txtDayOut.Location = new System.Drawing.Point(68, 40);
+            this.txtDayOut.Location = new System.Drawing.Point(87, 40);
             this.txtDayOut.Margin = new System.Windows.Forms.Padding(2);
             this.txtDayOut.Name = "txtDayOut";
-            this.txtDayOut.Size = new System.Drawing.Size(233, 20);
+            this.txtDayOut.Size = new System.Drawing.Size(214, 20);
             this.txtDayOut.TabIndex = 19;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(12, 43);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.Size = new System.Drawing.Size(71, 17);
             this.label8.TabIndex = 18;
             this.label8.Text = "Day_Out:";
             // 
@@ -84,10 +85,11 @@ namespace QuanLyTiemBanh.GUI
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(12, 10);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 13);
+            this.label7.Size = new System.Drawing.Size(30, 17);
             this.label7.TabIndex = 16;
             this.label7.Text = "ID:";
             // 
@@ -101,33 +103,40 @@ namespace QuanLyTiemBanh.GUI
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Location = new System.Drawing.Point(211, 162);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 31);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(55, 162);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 31);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(168, 10);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(154, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Emp_ID:";
             // 
@@ -147,18 +156,22 @@ namespace QuanLyTiemBanh.GUI
             // 
             // btnBillInfo
             // 
+            this.btnBillInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBillInfo.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBillInfo.ForeColor = System.Drawing.Color.White;
             this.btnBillInfo.Location = new System.Drawing.Point(398, 87);
             this.btnBillInfo.Name = "btnBillInfo";
             this.btnBillInfo.Size = new System.Drawing.Size(122, 31);
             this.btnBillInfo.TabIndex = 19;
             this.btnBillInfo.Text = "Chi Tiết";
-            this.btnBillInfo.UseVisualStyleBackColor = true;
+            this.btnBillInfo.UseVisualStyleBackColor = false;
             this.btnBillInfo.Click += new System.EventHandler(this.btnBillInfo_Click);
             // 
             // frmBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(550, 399);
             this.Controls.Add(this.btnBillInfo);
             this.Controls.Add(this.dtgvBill);
