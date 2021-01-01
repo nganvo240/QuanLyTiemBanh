@@ -38,6 +38,7 @@ namespace QuanLyTiemBanh.GUI
             this.label7 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbHelp = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCategory)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,12 +46,12 @@ namespace QuanLyTiemBanh.GUI
             // dtgvCategory
             // 
             this.dtgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCategory.Location = new System.Drawing.Point(40, 206);
+            this.dtgvCategory.Location = new System.Drawing.Point(40, 172);
             this.dtgvCategory.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvCategory.Name = "dtgvCategory";
             this.dtgvCategory.RowHeadersWidth = 62;
             this.dtgvCategory.RowTemplate.Height = 28;
-            this.dtgvCategory.Size = new System.Drawing.Size(290, 184);
+            this.dtgvCategory.Size = new System.Drawing.Size(304, 170);
             this.dtgvCategory.TabIndex = 18;
             // 
             // btnEdit
@@ -58,33 +59,35 @@ namespace QuanLyTiemBanh.GUI
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(141, 162);
+            this.btnEdit.Location = new System.Drawing.Point(140, 123);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(87, 31);
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(243, 162);
+            this.btnDelete.Location = new System.Drawing.Point(257, 123);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(87, 31);
             this.btnDelete.TabIndex = 16;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnAdd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(40, 162);
+            this.btnAdd.Location = new System.Drawing.Point(40, 123);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 31);
@@ -99,7 +102,7 @@ namespace QuanLyTiemBanh.GUI
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(26, 58);
+            this.panel1.Location = new System.Drawing.Point(40, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(304, 76);
@@ -144,12 +147,25 @@ namespace QuanLyTiemBanh.GUI
             this.label3.TabIndex = 4;
             this.label3.Text = "Name:";
             // 
+            // lbHelp
+            // 
+            this.lbHelp.AutoSize = true;
+            this.lbHelp.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHelp.Location = new System.Drawing.Point(347, 9);
+            this.lbHelp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbHelp.Name = "lbHelp";
+            this.lbHelp.Size = new System.Drawing.Size(18, 21);
+            this.lbHelp.TabIndex = 19;
+            this.lbHelp.Text = "?";
+            this.lbHelp.Click += new System.EventHandler(this.lbHelp_Click);
+            // 
             // frmCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(384, 409);
+            this.ClientSize = new System.Drawing.Size(376, 362);
+            this.Controls.Add(this.lbHelp);
             this.Controls.Add(this.dtgvCategory);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -161,6 +177,7 @@ namespace QuanLyTiemBanh.GUI
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -175,5 +192,6 @@ namespace QuanLyTiemBanh.GUI
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbHelp;
     }
 }

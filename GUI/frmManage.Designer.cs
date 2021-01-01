@@ -31,31 +31,31 @@
             this.lbUserName = new System.Windows.Forms.Label();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHelp = new System.Windows.Forms.Button();
             this.btnMin = new System.Windows.Forms.Button();
             this.panelFunction = new System.Windows.Forms.Panel();
-            this.groupBoxNhanVien = new System.Windows.Forms.GroupBox();
-            this.groupBoxAdmin = new System.Windows.Forms.GroupBox();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.lbNameButton = new System.Windows.Forms.Label();
-            this.lbvien = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.panelHienThi = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.groupBoxNhanVien = new System.Windows.Forms.GroupBox();
             this.btnChiTietHoaDon = new System.Windows.Forms.Button();
+            this.groupBoxAdmin = new System.Windows.Forms.GroupBox();
             this.btnHoaDon = new System.Windows.Forms.Button();
             this.btnLoaiSanPham = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.lbNameButton = new System.Windows.Forms.Label();
+            this.lbvien = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.panelHienThi = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelFunction.SuspendLayout();
             this.groupBoxNhanVien.SuspendLayout();
             this.groupBoxAdmin.SuspendLayout();
             this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbUserName
@@ -63,7 +63,7 @@
             this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbUserName.AutoSize = true;
             this.lbUserName.ForeColor = System.Drawing.Color.CadetBlue;
-            this.lbUserName.Location = new System.Drawing.Point(571, 12);
+            this.lbUserName.Location = new System.Drawing.Point(713, 12);
             this.lbUserName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(73, 13);
@@ -79,7 +79,7 @@
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(170, 422);
+            this.panelLeft.Size = new System.Drawing.Size(170, 408);
             this.panelLeft.TabIndex = 2;
             // 
             // panelLogo
@@ -93,6 +93,17 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(170, 99);
             this.panelLogo.TabIndex = 4;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::QuanLyTiemBanh.Properties.Resources.cake;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(45, 5);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 73);
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHelp
             // 
@@ -126,109 +137,11 @@
             this.panelFunction.Controls.Add(this.groupBoxNhanVien);
             this.panelFunction.Controls.Add(this.groupBoxAdmin);
             this.panelFunction.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFunction.Location = new System.Drawing.Point(0, 121);
+            this.panelFunction.Location = new System.Drawing.Point(0, 107);
             this.panelFunction.Margin = new System.Windows.Forms.Padding(2);
             this.panelFunction.Name = "panelFunction";
             this.panelFunction.Size = new System.Drawing.Size(170, 301);
             this.panelFunction.TabIndex = 5;
-            // 
-            // groupBoxNhanVien
-            // 
-            this.groupBoxNhanVien.Controls.Add(this.btnChiTietHoaDon);
-            this.groupBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxNhanVien.Location = new System.Drawing.Point(0, 175);
-            this.groupBoxNhanVien.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxNhanVien.Name = "groupBoxNhanVien";
-            this.groupBoxNhanVien.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxNhanVien.Size = new System.Drawing.Size(170, 126);
-            this.groupBoxNhanVien.TabIndex = 1;
-            this.groupBoxNhanVien.TabStop = false;
-            this.groupBoxNhanVien.Text = "Nhân viên";
-            // 
-            // groupBoxAdmin
-            // 
-            this.groupBoxAdmin.Controls.Add(this.btnHoaDon);
-            this.groupBoxAdmin.Controls.Add(this.btnLoaiSanPham);
-            this.groupBoxAdmin.Controls.Add(this.btnSanPham);
-            this.groupBoxAdmin.Controls.Add(this.btnNhanVien);
-            this.groupBoxAdmin.Controls.Add(this.btnTaiKhoan);
-            this.groupBoxAdmin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBoxAdmin.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxAdmin.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBoxAdmin.Name = "groupBoxAdmin";
-            this.groupBoxAdmin.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxAdmin.Size = new System.Drawing.Size(170, 175);
-            this.groupBoxAdmin.TabIndex = 0;
-            this.groupBoxAdmin.TabStop = false;
-            this.groupBoxAdmin.Text = "Admin";
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.SeaShell;
-            this.panelTop.Controls.Add(this.lbNameButton);
-            this.panelTop.Controls.Add(this.lbvien);
-            this.panelTop.Controls.Add(this.btnExit);
-            this.panelTop.Controls.Add(this.lbUserName);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(170, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(714, 38);
-            this.panelTop.TabIndex = 3;
-            // 
-            // lbNameButton
-            // 
-            this.lbNameButton.AutoSize = true;
-            this.lbNameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNameButton.Location = new System.Drawing.Point(58, 9);
-            this.lbNameButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbNameButton.Name = "lbNameButton";
-            this.lbNameButton.Size = new System.Drawing.Size(124, 17);
-            this.lbNameButton.TabIndex = 5;
-            this.lbNameButton.Text = "Tên from đang mở";
-            // 
-            // lbvien
-            // 
-            this.lbvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.lbvien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbvien.Location = new System.Drawing.Point(0, 35);
-            this.lbvien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbvien.Name = "lbvien";
-            this.lbvien.Size = new System.Drawing.Size(714, 3);
-            this.lbvien.TabIndex = 4;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(13, 8);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 21);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "X";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // panelHienThi
-            // 
-            this.panelHienThi.BackColor = System.Drawing.Color.AliceBlue;
-            this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelHienThi.Location = new System.Drawing.Point(170, 38);
-            this.panelHienThi.Margin = new System.Windows.Forms.Padding(2);
-            this.panelHienThi.Name = "panelHienThi";
-            this.panelHienThi.Size = new System.Drawing.Size(714, 384);
-            this.panelHienThi.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::QuanLyTiemBanh.Properties.Resources.cake;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 5);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 73);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // btnDangXuat
             // 
@@ -244,6 +157,19 @@
             this.btnDangXuat.Text = "&Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // groupBoxNhanVien
+            // 
+            this.groupBoxNhanVien.Controls.Add(this.btnChiTietHoaDon);
+            this.groupBoxNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxNhanVien.Location = new System.Drawing.Point(0, 175);
+            this.groupBoxNhanVien.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxNhanVien.Name = "groupBoxNhanVien";
+            this.groupBoxNhanVien.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxNhanVien.Size = new System.Drawing.Size(170, 126);
+            this.groupBoxNhanVien.TabIndex = 1;
+            this.groupBoxNhanVien.TabStop = false;
+            this.groupBoxNhanVien.Text = "Nhân viên";
             // 
             // btnChiTietHoaDon
             // 
@@ -262,6 +188,23 @@
             this.btnChiTietHoaDon.Text = "&Chi tiết hóa đơn";
             this.btnChiTietHoaDon.UseVisualStyleBackColor = false;
             this.btnChiTietHoaDon.Click += new System.EventHandler(this.btnChiTietHoaDon_Click);
+            // 
+            // groupBoxAdmin
+            // 
+            this.groupBoxAdmin.Controls.Add(this.btnHoaDon);
+            this.groupBoxAdmin.Controls.Add(this.btnLoaiSanPham);
+            this.groupBoxAdmin.Controls.Add(this.btnSanPham);
+            this.groupBoxAdmin.Controls.Add(this.btnNhanVien);
+            this.groupBoxAdmin.Controls.Add(this.btnTaiKhoan);
+            this.groupBoxAdmin.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBoxAdmin.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxAdmin.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBoxAdmin.Name = "groupBoxAdmin";
+            this.groupBoxAdmin.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxAdmin.Size = new System.Drawing.Size(170, 175);
+            this.groupBoxAdmin.TabIndex = 0;
+            this.groupBoxAdmin.TabStop = false;
+            this.groupBoxAdmin.Text = "Admin";
             // 
             // btnHoaDon
             // 
@@ -350,11 +293,68 @@
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.SeaShell;
+            this.panelTop.Controls.Add(this.lbNameButton);
+            this.panelTop.Controls.Add(this.lbvien);
+            this.panelTop.Controls.Add(this.btnExit);
+            this.panelTop.Controls.Add(this.lbUserName);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(170, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(2);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(856, 38);
+            this.panelTop.TabIndex = 3;
+            // 
+            // lbNameButton
+            // 
+            this.lbNameButton.AutoSize = true;
+            this.lbNameButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNameButton.Location = new System.Drawing.Point(58, 9);
+            this.lbNameButton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbNameButton.Name = "lbNameButton";
+            this.lbNameButton.Size = new System.Drawing.Size(124, 17);
+            this.lbNameButton.TabIndex = 5;
+            this.lbNameButton.Text = "Tên from đang mở";
+            // 
+            // lbvien
+            // 
+            this.lbvien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lbvien.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbvien.Location = new System.Drawing.Point(0, 35);
+            this.lbvien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbvien.Name = "lbvien";
+            this.lbvien.Size = new System.Drawing.Size(856, 3);
+            this.lbvien.TabIndex = 4;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Location = new System.Drawing.Point(13, 8);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(32, 21);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "X";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panelHienThi
+            // 
+            this.panelHienThi.BackColor = System.Drawing.Color.AliceBlue;
+            this.panelHienThi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelHienThi.Location = new System.Drawing.Point(170, 38);
+            this.panelHienThi.Margin = new System.Windows.Forms.Padding(2);
+            this.panelHienThi.Name = "panelHienThi";
+            this.panelHienThi.Size = new System.Drawing.Size(856, 370);
+            this.panelHienThi.TabIndex = 4;
+            // 
             // frmManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 422);
+            this.ClientSize = new System.Drawing.Size(1026, 408);
             this.Controls.Add(this.panelHienThi);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLeft);
@@ -365,6 +365,7 @@
             this.Text = "frmManage";
             this.panelLeft.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelFunction.ResumeLayout(false);
             this.panelFunction.PerformLayout();
             this.groupBoxNhanVien.ResumeLayout(false);
@@ -373,7 +374,6 @@
             this.groupBoxAdmin.PerformLayout();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

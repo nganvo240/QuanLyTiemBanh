@@ -46,6 +46,7 @@ namespace QuanLyTiemBanh.GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dtgvCake = new System.Windows.Forms.DataGridView();
+            this.lbHelp = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCake)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@ namespace QuanLyTiemBanh.GUI
             this.panel1.Location = new System.Drawing.Point(24, 29);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(720, 74);
+            this.panel1.Size = new System.Drawing.Size(640, 71);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -238,12 +239,25 @@ namespace QuanLyTiemBanh.GUI
             this.dtgvCake.Size = new System.Drawing.Size(720, 151);
             this.dtgvCake.TabIndex = 13;
             // 
+            // lbHelp
+            // 
+            this.lbHelp.AutoSize = true;
+            this.lbHelp.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHelp.Location = new System.Drawing.Point(680, 9);
+            this.lbHelp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbHelp.Name = "lbHelp";
+            this.lbHelp.Size = new System.Drawing.Size(18, 21);
+            this.lbHelp.TabIndex = 20;
+            this.lbHelp.Text = "?";
+            this.lbHelp.Click += new System.EventHandler(this.lbHelp_Click);
+            // 
             // frmCake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(775, 374);
+            this.Controls.Add(this.lbHelp);
             this.Controls.Add(this.dtgvCake);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDelete);
@@ -255,6 +269,7 @@ namespace QuanLyTiemBanh.GUI
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCake)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -277,5 +292,6 @@ namespace QuanLyTiemBanh.GUI
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dtgvCake;
+        private System.Windows.Forms.Label lbHelp;
     }
 }

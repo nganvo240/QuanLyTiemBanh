@@ -90,6 +90,7 @@
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
@@ -124,25 +125,25 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(8, 53);
+            this.panel1.Location = new System.Drawing.Point(8, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(713, 70);
+            this.panel1.Size = new System.Drawing.Size(767, 112);
             this.panel1.TabIndex = 7;
             // 
             // txtSex
             // 
-            this.txtSex.Location = new System.Drawing.Point(54, 40);
+            this.txtSex.Location = new System.Drawing.Point(670, 80);
             this.txtSex.Margin = new System.Windows.Forms.Padding(2);
             this.txtSex.Name = "txtSex";
-            this.txtSex.Size = new System.Drawing.Size(55, 20);
+            this.txtSex.Size = new System.Drawing.Size(69, 20);
             this.txtSex.TabIndex = 19;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(12, 43);
+            this.label8.Location = new System.Drawing.Point(628, 83);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 17);
@@ -151,7 +152,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(54, 7);
+            this.txtID.Location = new System.Drawing.Point(79, 7);
             this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(55, 20);
@@ -172,7 +173,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(509, 43);
+            this.label6.Location = new System.Drawing.Point(499, 83);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 17);
@@ -181,25 +182,25 @@
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(578, 40);
+            this.txtStatus.Location = new System.Drawing.Point(568, 80);
             this.txtStatus.Margin = new System.Windows.Forms.Padding(2);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(112, 20);
+            this.txtStatus.Size = new System.Drawing.Size(38, 20);
             this.txtStatus.TabIndex = 14;
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(387, 40);
+            this.txtSalary.Location = new System.Drawing.Point(349, 80);
             this.txtSalary.Margin = new System.Windows.Forms.Padding(2);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(97, 20);
+            this.txtSalary.Size = new System.Drawing.Size(134, 20);
             this.txtSalary.TabIndex = 13;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(313, 43);
+            this.label5.Location = new System.Drawing.Point(275, 83);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 17);
@@ -208,17 +209,17 @@
             // 
             // txtPosition
             // 
-            this.txtPosition.Location = new System.Drawing.Point(578, 7);
+            this.txtPosition.Location = new System.Drawing.Point(79, 42);
             this.txtPosition.Margin = new System.Windows.Forms.Padding(2);
             this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(112, 20);
+            this.txtPosition.Size = new System.Drawing.Size(163, 20);
             this.txtPosition.TabIndex = 10;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(509, 10);
+            this.label4.Location = new System.Drawing.Point(10, 45);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 17);
@@ -227,25 +228,25 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(199, 7);
+            this.txtName.Location = new System.Drawing.Point(431, 7);
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(101, 20);
+            this.txtName.Size = new System.Drawing.Size(308, 20);
             this.txtName.TabIndex = 8;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(199, 40);
+            this.txtPhone.Location = new System.Drawing.Point(79, 80);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(101, 20);
+            this.txtPhone.Size = new System.Drawing.Size(163, 20);
             this.txtPhone.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(141, 43);
+            this.label2.Location = new System.Drawing.Point(10, 83);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 17);
@@ -256,7 +257,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(141, 10);
+            this.label3.Location = new System.Drawing.Point(357, 10);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
@@ -265,17 +266,17 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(387, 7);
+            this.txtAddress.Location = new System.Drawing.Point(431, 42);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(97, 20);
+            this.txtAddress.Size = new System.Drawing.Size(308, 20);
             this.txtAddress.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 10);
+            this.label1.Location = new System.Drawing.Point(357, 45);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 17);

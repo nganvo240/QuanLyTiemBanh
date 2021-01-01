@@ -79,6 +79,15 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Lỗi! Không thêm được tài khoản");
             }
+
+            txtID.Text = "";
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtAddress.Text = "";
+            txtPosition.Text = "";
+            txtSalary.Text = "";
+            txtSex.Text = "";
+            txtStatus.Text = "";
         }
         private event EventHandler updateEmp;
         public event EventHandler UpdateEmp
@@ -108,6 +117,14 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Lỗi! Không sửa được tài khoản");
             }
+            txtID.Text = "";
+            txtName.Text = "";
+            txtPhone.Text = "";
+            txtAddress.Text = "";
+            txtPosition.Text = "";
+            txtSalary.Text = "";
+            txtSex.Text = "";
+            txtStatus.Text = "";
         }
         /*private event EventHandler deleteEmp;
         public event EventHandler DeleteEmp

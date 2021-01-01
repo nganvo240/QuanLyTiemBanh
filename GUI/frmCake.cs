@@ -70,6 +70,13 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Lỗi! Không thêm được sản phẩm");
             }
+
+            txtID.Text = "";
+            txtCategory_id.Text = "";
+            txtAmount.Text = "";
+            txtName.Text = "";
+            txtPrice.Text = "";
+            txtPlace.Text = "";
         }
 
         //button update
@@ -99,6 +106,13 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Lỗi! Không sửa được thông tin sản phẩm này!");
             }
+
+            txtID.Text = "";
+            txtCategory_id.Text = "";
+            txtAmount.Text = "";
+            txtName.Text = "";
+            txtPrice.Text = "";
+            txtPlace.Text = "";
         }
         //button delete, vấn đề khóa ngoại trong bill_infor
         private event EventHandler deleteCake;
@@ -123,6 +137,11 @@ namespace QuanLyTiemBanh.GUI
             {
                 MessageBox.Show("Lỗi! Không xóa được sản phẩm này!");
             }
+        }
+
+        private void lbHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chỉ xóa sản phầm nào mà nó không nằm trong hóa đơn.", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

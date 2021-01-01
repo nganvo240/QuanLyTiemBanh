@@ -18,7 +18,8 @@ namespace QuanLyTiemBanh.GUI
         {
             InitializeComponent();
             dtgvCategory.DataSource = categoryList;
-
+            AddCategoryBinding();
+            LoadCategory();
         }
         void AddCategoryBinding()
         {
@@ -43,15 +44,74 @@ namespace QuanLyTiemBanh.GUI
 
             if (CategoryDAO.Instance.InsertCategory(id, name))
             {
-                MessageBox.Show("Thêm loại sản phẩm thành công");
+                MessageBox.Show("Thêm phân loại sản phẩm thành công");
                 LoadCategory();
                 if (insertCategory != null)
                     insertCategory(this, new EventArgs());
             }
             else
             {
-                MessageBox.Show("Lỗi! Không thêm được loại sản phẩm này!");
+                MessageBox.Show("Lỗi! Không thêm được phân loại này!");
             }
+            txtID.Text = "";
+            txtName.Text = "";
+        }
+
+        //button sửa
+        private event EventHandler updateCategory;
+        public event EventHandler UpdateCategory
+        {
+            add { updateCategory += value; }
+            remove { updateCategory -= value; }
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            string name = txtName.Text;
+
+            if (CategoryDAO.Instance.UpdateCategory(id, name))
+            {
+                MessageBox.Show("Sửa loại sản phẩm thành công");
+                LoadCategory();
+                if (updateCategory != null)
+                    updateCategory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Lỗi! Không sửa được phân loại này!");
+            }
+            txtID.Text = "";
+            txtName.Text = "";
+        }
+        //button delete
+        private event EventHandler deleteCategory;
+        public event EventHandler DeleteCategory
+        {
+            add { deleteCategory += value; }
+            remove { deleteCategory -= value; }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txtID.Text);
+            string name = txtName.Text;
+
+            if (CategoryDAO.Instance.DeleteCategory(id))
+            {
+                MessageBox.Show("Xóa loại sản phẩm thành công");
+                LoadCategory();
+                if (deleteCategory != null)
+                    deleteCategory(this, new EventArgs());
+            }
+            else
+            {
+                MessageBox.Show("Lỗi! Không xóa được phân loại này!");
+            }
+
+        }
+
+        private void lbHelp_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Chỉ xóa phân loại nào mà sản phẩm thuộc phân loại đó không nằm trong hóa đơn.", "Lưu ý", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
